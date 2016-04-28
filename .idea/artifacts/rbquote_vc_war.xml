@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="rbquote-vc:war">
-    <output-path>$PROJECT_DIR$/rbquote-vc/target</output-path>
-    <root id="archive" name="rbquote-vc.war">
-      <element id="artifact" artifact-name="rbquote-vc:war exploded" />
-    </root>
-  </artifact>
-</component>
