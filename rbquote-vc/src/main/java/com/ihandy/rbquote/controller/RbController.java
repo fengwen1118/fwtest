@@ -1,5 +1,7 @@
 package com.ihandy.rbquote.controller;
 
+import com.ihandy.quote_common.HttpUtils;
+import com.ihandy.quote_core.bean.request.RBSysLoginRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -49,7 +51,7 @@ public class RbController {
     @RequestMapping("/getCarInfoByLicenseNo")
     @Transactional
     @ResponseBody
-    public Map<String, Object> getCarInfoByLicenseNo( String LicenseNo) {
+    public Map<String, Object> getCarInfoByLicenseNo( String LicenseNo , RBSysLoginRequest request) {
         Map map =new HashMap();
         try {
 
@@ -59,6 +61,13 @@ public class RbController {
         return map;
     }
 
+    public String MainUrl = "http://10.134.136.48:8888";
+    public String LoginURL = this.MainUrl + "/portal/index.jsp";
+    public String param = "service=http%3A%2F%2F10.134.136.48%3A80%2Fportal%2Findex.jsp";
+    public Map<String ,Object> RbSysLogin(){
+        Map map =  HttpUtils.sendPost(LoginURL,param);
+        return map;
+    }
 
 
 }
