@@ -5,7 +5,7 @@ import java.security.Timestamp;
 /**
  * Created by fengwen on 2016/4/29.
  */
-public class CarInfoResponse extends  BaseResponse{
+public class UserInfoResponse extends  BaseResponse{
 
     public String CarUsedType; //使用性质
    

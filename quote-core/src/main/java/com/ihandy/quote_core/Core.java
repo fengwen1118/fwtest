@@ -1,6 +1,5 @@
 package com.ihandy.quote_core;
 
-import com.ihandy.quote_core.bean.request.RBSysLoginRequest;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -9,7 +8,7 @@ import org.apache.commons.logging.LogFactory;
  */
 public class Core {
     private static Log log = LogFactory.getLog(Core.class);
-    public boolean checkLoginRequest(RBSysLoginRequest request){
+    public boolean checkLoginRequest(RBRequestSysLogin request){
         Boolean flag =true;
 
         if(null==request.getUserName()||null==request.getPassword()||null ==request.getCookies()){

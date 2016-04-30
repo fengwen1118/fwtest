@@ -3,7 +3,7 @@ package com.ihandy.quote_core.bean.request;
 /**
  * Created by fengwen on 2016/4/29.
  */
-public class RBQuestBrowsePolicyNo {
+public class RBRequestBrowsePolicyNo {
 
  /*   var editType = document.getElementById("editType");
     var bizType = document.getElementById("bizType");
