@@ -8,14 +8,6 @@ import org.apache.commons.logging.LogFactory;
  */
 public class Core {
     private static Log log = LogFactory.getLog(Core.class);
-    public boolean checkLoginRequest(RBRequestSysLogin request){
-        Boolean flag =true;
 
-        if(null==request.getUserName()||null==request.getPassword()||null ==request.getCookies()){
-            flag = false;
-            log.info("访问页面请求信息不完整/n");
-        }
-        return flag;
-    };
 
 }
