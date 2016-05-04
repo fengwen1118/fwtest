@@ -14,4 +14,6 @@ public class SysContantUrl {
     public String insuredTab = "/business/showCinsured";// 关系人信息 RbQuestBrowsePolicyNo
     public String kindTab = "'/business/showCitemKind";// 保险责任 RbQuestBrowsePolicyNo
 
+    public String queryClaimsMsg ="/prpall/business/queryClaimsMsg";//查询理赔信息 bizNo=PDAT20151102T000182528&bizType=POLICY
+
 }

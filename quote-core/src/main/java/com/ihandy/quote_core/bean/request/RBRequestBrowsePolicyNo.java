@@ -25,7 +25,7 @@ public class RBRequestBrowsePolicyNo {
     public int editType;
     public int bizType;
     public String bizNo;
-    public String riskCode;
+    public String riskCode;//产品代码(DAT\DZA)
     public String minusFlag;
     public String contractNo;
     public String comCode;
