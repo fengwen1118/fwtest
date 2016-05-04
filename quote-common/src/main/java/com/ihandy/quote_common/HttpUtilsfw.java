@@ -1,6 +1,7 @@
 package com.ihandy.quote_common;
 
 
+import com.sun.deploy.net.HttpResponse;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -10,7 +11,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import java.net.CookiePolicy;
 import java.net.URL;
+import java.security.*;
+import java.security.cert.CertificateException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,7 +26,6 @@ import javax.net.ssl.TrustManager;
 
 import java.net.URLConnection;
 import java.io.*;
-
 
 
 /**
@@ -138,11 +141,11 @@ public class HttpUtilsfw {
         return sb.toString();
     }
 
+
+
     public static void main(String[] args) throws Exception {
-        // 创建Get方法实例
-        Map<String, String> resultMap = new HashMap<String, String>();
-        resultMap = sendGet("http://www.baidu.com",null);
-        log.info(resultMap);
+
+
     }
 
 
