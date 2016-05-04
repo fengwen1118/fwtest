@@ -11,7 +11,7 @@ import java.security.cert.X509Certificate;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
-public class MyX509TrustManager {
+public class MyX509TrustManager  implements X509TrustManager {
     /*
 	 * The default X509TrustManager returned by SunX509. We’ll delegate
 	 * decisions to it, and fall back to the logic in this class if the default
