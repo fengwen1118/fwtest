@@ -2,7 +2,7 @@ package com.ihandy.rbquote.controller;
 
 import com.ihandy.quote_core.bean.Cookie;
 import com.ihandy.quote_core.bean.response.CarInfoResponse;
-import com.ihandy.quote_core.service.RBService;
+import com.ihandy.quote_core.service.IRBService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class RbController {
     private static Logger logger = LoggerFactory.getLogger(RbController.class);
 
      @Autowired
-     private RBService rbService;
+     private IRBService rbService;
     /**
      * 查询续保信息
      *

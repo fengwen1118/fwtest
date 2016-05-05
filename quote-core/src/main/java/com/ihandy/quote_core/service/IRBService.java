@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by fengwen on 2016/4/29.
  */
-public interface RBService {
+public interface IRBService {
     /**
      * 通过车牌号获取车辆信息
      */

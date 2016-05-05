@@ -23,6 +23,11 @@
       <servlet_version>3.1.0</servlet_version>
       <org.slf4j.version>1.7.12</org.slf4j.version>
       <validator.version>4.3.2.Final</validator.version>
+      <jedis.version>2.7.2</jedis.version>
+      <commons.version>3.3.2</commons.version>
+      <kryo.version>3.0.3</kryo.version>
+      <protobuf-java.version>2.6.1</protobuf-java.version>
+      <fst.version>2.42</fst.version>
   </properties>
 
   <dependencies>
@@ -205,6 +210,38 @@
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
       <version>4.3.6</version>
+    </dependency>
+
+    <!-- if you use redis in spring mvc -->
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>${jedis.version}</version>
+      <type>jar</type>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>${commons.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.esotericsoftware</groupId>
+      <artifactId>kryo</artifactId>
+      <version>${kryo.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+      <version>${protobuf-java.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>de.ruedigermoeller</groupId>
+      <artifactId>fst</artifactId>
+      <version>${fst.version}</version>
     </dependency>
 
   </dependencies>

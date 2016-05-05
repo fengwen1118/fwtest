@@ -10,7 +10,7 @@ public class RelaPeopleResponse {
 
     private String name;//名称
 
-    private String companyTpye;//公司性质
+    private String companyType;//公司性质
 
     private String IdCardNo;//证件号码
 

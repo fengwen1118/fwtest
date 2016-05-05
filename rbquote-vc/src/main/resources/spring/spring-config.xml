@@ -14,6 +14,7 @@
         <property name="locations" >
             <list>
                 <value>classpath:application-web.properties</value>
+                <value>classpath:redis/redis.properties</value>
             </list>
         </property>
         <property name="fileEncoding">
@@ -30,7 +31,8 @@
 </aop:config>
 <context:annotation-config/>
 <!-- cookie related -->
-<import resource="classpath:serviceContext.xml" />
+    <import resource="classpath:serviceContext.xml" />
+    <import resource="classpath:redis/spring-redis.xml"/>
 
 
 </beans>
