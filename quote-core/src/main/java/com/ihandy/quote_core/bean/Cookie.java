@@ -7,10 +7,15 @@ import java.util.Map;
  */
 public class Cookie {
     private String prpall;
+
     private String JSESSIONID;
+
     private String CASTGC ;
+
     private String BOCINS_prpall_Cookie;
+
     private String PICCINS_JFCD_Cookie;
+
     private Map<String ,Object> map;//未知元素
 
 

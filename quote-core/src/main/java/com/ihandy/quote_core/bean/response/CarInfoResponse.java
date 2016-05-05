@@ -21,8 +21,6 @@ public class CarInfoResponse extends  BaseResponse{
     
     private String LicenseOwner;// 车主姓名
 
-    private double PurchasePrice; //购买价格
-    
     private String LicenseOwnerIdCardNo;//证件号码
    
     private int LicenseOwnerIdCardType;//证件类型
@@ -33,6 +31,8 @@ public class CarInfoResponse extends  BaseResponse{
    
     private String LicenseNo;//车牌号
 
+    private double PurchasePrice; //购买价格
+
     private Timestamp CarRegisterDate;//车辆注册日期
   
     private int CarSeated;//座位数量
@@ -40,6 +40,8 @@ public class CarInfoResponse extends  BaseResponse{
     private int CityCode ; //城市编码
     
     private int CompanyId; //sourceId公司
+
+    private RelaPeopleResponse relaPeopleResponse;//相关人员
 
     private QuoteResponse quoteResponse;//报价bean
 

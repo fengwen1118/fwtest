@@ -5,6 +5,8 @@ import com.ihandy.quote_core.bean.response.CarInfoResponse;
 import com.ihandy.quote_core.bean.response.ClaimResponse;
 import com.ihandy.quote_core.bean.response.QuoteResponse;
 
+import java.util.List;
+
 /**
  * Created by fengwen on 2016/4/29.
  */
@@ -21,7 +23,12 @@ public interface RBService {
     /**
      * 通过车辆信息获取出险信息
      */
-    ClaimResponse geClaimInfoByCarInfo(CarInfoResponse carInfo, Cookie cookie);
+    ClaimResponse getClaimInfoByCarInfo(CarInfoResponse carInfo, Cookie cookie);
+
+    /**
+     * 通过车辆信息获取出险信息list
+     */
+    List<ClaimResponse> getClaimInfoList(CarInfoResponse carInfo, Cookie cookie);
 
 
 }

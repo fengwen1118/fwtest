@@ -23,13 +23,13 @@ public class RBRequestBrowsePolicyNo {
     + '&bizNo=' + bizNo.value + '&riskCode=' + document.getElementById("riskCode").value
     + '&minusFlag=' + minusFlag.value + "&contractNo=" + contractNo.value
     +"&comCode="+comCode.value+"&originQuery="+originQuery.value+"&proposalNo="+proposalNo.value;*/
-    private int editType;
-    private int bizType;
-    private String bizNo;
-    private String riskCode;//产品代码(DAT\DZA)
+    private int hideEditType;//编辑类型
+    private int hideBizType;//业务类型
+    private String bizNo;//
+    private String riskCode;//产品代码
     private String minusFlag;
     private String contractNo;
-    private String comCode;
+    private String comCode;//归属机构部门
     private String originQuery;
     private String proposalNo;
 

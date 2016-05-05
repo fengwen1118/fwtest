@@ -6,7 +6,7 @@ import java.util.Map;
  * Created by fengwen on 2016/4/29.
  */
 public class RBRequestSelectRenewal {
-    //查看保单数据源
+    //查看保单数据
     private Map<String, Object> Cookies;
     private String PlateNo;
     private String EngineNo;
@@ -21,6 +21,8 @@ public class RBRequestSelectRenewal {
 
     private int jumpToPage;
     private String ipolicyNo;
+    private String licenseColorCode;
+    private String licenseType;
 
 
 }

@@ -7,6 +7,8 @@ import com.ihandy.quote_core.bean.response.QuoteResponse;
 import com.ihandy.quote_core.service.RBService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by fengwen on 2016/4/29.
  */
@@ -22,7 +24,14 @@ public class RBServiceImpl implements RBService {
         return null;
     }
 
-    public ClaimResponse geClaimInfoByCarInfo(CarInfoResponse carInfo, Cookie cookie) {
+    public ClaimResponse getClaimInfoByCarInfo(CarInfoResponse carInfo, Cookie cookie) {
         return null;
     }
+
+    public List<ClaimResponse> getClaimInfoList(CarInfoResponse carInfo, Cookie cookie) {
+        return null;
+    }
+
+
+
 }
