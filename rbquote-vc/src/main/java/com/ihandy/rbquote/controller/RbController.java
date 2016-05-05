@@ -1,7 +1,7 @@
 package com.ihandy.rbquote.controller;
 
 import com.ihandy.quote_core.bean.Cookie;
-import com.ihandy.quote_core.bean.response.UserInfoResponse;
+import com.ihandy.quote_core.bean.response.CarInfoResponse;
 import com.ihandy.quote_core.service.RBService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -57,7 +57,7 @@ public class RbController {
     public Map<String, Object> getCarInfoByLicenseNo( String LicenseNo ,  Cookie cookie) {
         Map map =new HashMap();
         try {
-            UserInfoResponse response = rbService.getCarInfoByLicenseNo(LicenseNo,cookie);
+            CarInfoResponse response = rbService.getCarInfoByLicenseNo(LicenseNo,cookie);
         } catch (Exception e) {
 
         }

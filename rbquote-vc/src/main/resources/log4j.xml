@@ -16,7 +16,7 @@
         <param name="encoding" value="GBK"/>
         <param name="DatePattern" value="'.'yyyy-MM-dd"/>
         <param name="Append" value="true"/>
-        <param name="file" value="${base.log.path}/zaiart.log"/>
+        <param name="file" value="${base.log.path}/quote.log"/>
 
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%t %d [%7r] %6p - %30.30c - %m \n"/>

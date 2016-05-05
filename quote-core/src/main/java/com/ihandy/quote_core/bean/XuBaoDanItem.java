@@ -4,26 +4,26 @@ package com.ihandy.quote_core.bean;
  * Created by fengwen on 2016/4/30.
  */
 public class XuBaoDanItem {
-    public String frameNo;
+    private String frameNo;
 
-    public String lastDamagedBI;
+    private String lastDamagedBI;
     
-    public String noDamYearsCI;
+    private String noDamYearsCI;
 
-    public String policyNo;
+    private String policyNo;
 
-    public String endDate;
+    private String endDate;
 
-    public String lastDamagedCI;
+    private String lastDamagedCI;
 
-    public String noDamYearsBI;
+    private String noDamYearsBI;
 
-    public String riskCode;
+    private String riskCode;
 
-    public String licenseNo;
+    private String licenseNo;
  
-    public String engineNo;
+    private String engineNo;
 
-    public String carKindCode;
+    private String carKindCode;
 
 }

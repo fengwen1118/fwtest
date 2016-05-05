@@ -4,6 +4,7 @@ package com.ihandy.quote_core.bean.request;
  * Created by fengwen on 2016/4/29.
  */
 public class RBRequestBrowsePolicyNo {
+   //浏览保单号请求
 
  /*   var editType = document.getElementById("editType");
     var bizType = document.getElementById("bizType");
@@ -22,14 +23,14 @@ public class RBRequestBrowsePolicyNo {
     + '&bizNo=' + bizNo.value + '&riskCode=' + document.getElementById("riskCode").value
     + '&minusFlag=' + minusFlag.value + "&contractNo=" + contractNo.value
     +"&comCode="+comCode.value+"&originQuery="+originQuery.value+"&proposalNo="+proposalNo.value;*/
-    public int editType;
-    public int bizType;
-    public String bizNo;
-    public String riskCode;//产品代码(DAT\DZA)
-    public String minusFlag;
-    public String contractNo;
-    public String comCode;
-    public String originQuery;
-    public String proposalNo;
+    private int editType;
+    private int bizType;
+    private String bizNo;
+    private String riskCode;//产品代码(DAT\DZA)
+    private String minusFlag;
+    private String contractNo;
+    private String comCode;
+    private String originQuery;
+    private String proposalNo;
 
 }

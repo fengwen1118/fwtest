@@ -9,7 +9,17 @@
     http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context-3.1.xsd">
-
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" >
+            <list>
+                <value>classpath:application-web.properties</value>
+            </list>
+        </property>
+        <property name="fileEncoding">
+            <value>UTF-8</value>
+        </property>
+    </bean>
 <context:component-scan base-package="com.ihandy.rbquote"/>
 <aop:aspectj-autoproxy expose-proxy="true"/>
 <aop:config>
