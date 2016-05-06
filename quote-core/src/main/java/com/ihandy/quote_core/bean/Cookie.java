@@ -18,5 +18,11 @@ public class Cookie {
 
     private Map<String ,Object> map;//未知元素
 
+    // private int printType;
+    // private String businessNo;
+    // private String comCode;
+    // private String printRiskCode;
+    // private int isChange;
+    // private int flag;
 
 }

@@ -28,6 +28,7 @@
       <kryo.version>3.0.3</kryo.version>
       <protobuf-java.version>2.6.1</protobuf-java.version>
       <fst.version>2.42</fst.version>
+      <oracle.version>10.2.0.4.0</oracle.version>
   </properties>
 
   <dependencies>
@@ -242,6 +243,12 @@
       <groupId>de.ruedigermoeller</groupId>
       <artifactId>fst</artifactId>
       <version>${fst.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.oracle</groupId>
+      <artifactId>ojdbc14</artifactId>
+      <version>${oracle.version}</version>
     </dependency>
 
   </dependencies>

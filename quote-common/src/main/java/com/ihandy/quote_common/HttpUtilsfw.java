@@ -1,7 +1,5 @@
 package com.ihandy.quote_common;
 
-
-import com.sun.deploy.net.HttpResponse;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -11,10 +9,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-import java.net.CookiePolicy;
 import java.net.URL;
-import java.security.*;
-import java.security.cert.CertificateException;
+
 import java.util.HashMap;
 import java.util.Map;
 
