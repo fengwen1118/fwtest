@@ -1,23 +1,72 @@
 package com.ihandy.quote_core.service.impl;
 
-import com.ihandy.quote_core.bean.Cookie;
+
+import com.ihandy.quote_core.bean.*;
 import com.ihandy.quote_core.bean.response.CarInfoResponse;
 import com.ihandy.quote_core.bean.response.ClaimResponse;
 import com.ihandy.quote_core.bean.response.QuoteResponse;
+import com.ihandy.quote_core.dao.IRBDao;
 import com.ihandy.quote_core.service.IRBService;
+import com.ihandy.quote_core.service.IRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Field;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by fengwen on 2016/4/29.
  */
 @Service
 public class RBServiceImpl implements IRBService {
+    private  String[] carInfoStrArr={"a.html","b.html","c.html"};
+    private  Integer[] carInfoIntArr={1,3,2};
+    @Autowired
+    private IRBDao iRbDao;
+    @Autowired
+    private  IRequest iRequest;
     public CarInfoResponse getCarInfoByLicenseNo(String licenseNo, Cookie cookie) {
-        CarInfoResponse response =null;
+        SortedHSLinkedList<Integer,Request> list = new SortedHSLinkedList<Integer,Request>();
+        CarInfoResponse  carInfoResponse =null;
         // TODO: 2016/4/30  获取车架号、发动机号、品牌型号
-        return response;
+
+        //填充链表id和部分url data
+        for(int i=0;i<carInfoIntArr.length;i++){
+                    Request request = iRequest.combineRequest(carInfoStrArr[i]);
+                    list.insertNode(i,request);
+        }
+        Node position = list.getHead();
+        int count =1;
+        while(position!=null){
+            Request request = (Request) position.data;
+            int nodeId = (Integer) position.id;
+            System.out.println("id = "+ nodeId + " ------->  data = " + position.data+"\n");
+            if(count==1){
+                //第一次发出页面请求
+                Map map=new HashMap();
+                map.put("carNo",licenseNo);
+                request.setRequestParam(map);
+            }
+            Map<String, Object> map = iRequest.sendPostAndParseResponseForCarInfo(nodeId ,request);
+            Map<String, Object> returnMap = new HashMap<String, Object>();
+            position = position.next;
+            if(position == null){
+                //即将跳出循环，返回信息
+            }else {
+                //赋值下一页面需求参数
+                Request requestNext = (Request) position.data;
+                Map requestMap =(Map) map.get("requestParam");
+                requestNext.setRequestParam(requestMap);
+                //将返回信息赋值到 carInfoResponse 对象
+                returnMap.put(nodeId+"", map.get("responseResult"));
+            }
+            count++;
+        }
+
+        return carInfoResponse;
     }
 
     public QuoteResponse getQuoteInfoByCarInfo(CarInfoResponse carInfo, Cookie cookie) {

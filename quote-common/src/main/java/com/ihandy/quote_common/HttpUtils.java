@@ -27,9 +27,9 @@ import java.io.*;
 /**
  * Created by fengwen on 2016/4/28.
  */
-public class HttpUtilsfw {
+public class HttpUtils {
 
-    private static Log log = LogFactory.getLog(HttpUtilsfw.class);
+    private static Log log = LogFactory.getLog(HttpUtils.class);
 
     /**
      * 向指定 URL 发送 GET 方法的请求
@@ -145,7 +145,7 @@ public class HttpUtilsfw {
     }
 
 
-    private static Log logger = LogFactory.getLog(HttpUtilsfw.class);
+    private static Log logger = LogFactory.getLog(HttpUtils.class);
 
     private static final int CONNECTION_TIMEOUT = 1000;// 连接超时
 
@@ -245,4 +245,5 @@ public class HttpUtilsfw {
         }
         return resultMap;
     }
+
 }

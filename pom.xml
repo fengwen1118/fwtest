@@ -7,7 +7,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>quote-core</module>
-    <module>rbquote-vc</module>
+    <module>quote-vc</module>
     <module>quote-common</module>
   </modules>
   <packaging>pom</packaging>

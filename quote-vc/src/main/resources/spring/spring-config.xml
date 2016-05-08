@@ -14,6 +14,7 @@
         <property name="locations" >
             <list>
                 <value>classpath:application-web.properties</value>
+                <value>classpath:url.properties</value>
                 <value>classpath:redis/redis.properties</value>
             </list>
         </property>

@@ -20,15 +20,7 @@
 		<constructor-arg>
 			<set>
 				<bean class="redis.clients.jedis.HostAndPort">
-					<constructor-arg value="${redis.ip0}"/>
-					<constructor-arg value="${redis.port}" type="int"/>
-				</bean>
-				<bean class="redis.clients.jedis.HostAndPort">
-					<constructor-arg value="${redis.ip1}"/>
-					<constructor-arg value="${redis.port}" type="int"/>
-				</bean>
-				<bean class="redis.clients.jedis.HostAndPort">
-					<constructor-arg value="${redis.ip2}"/>
+					<constructor-arg value="${redis.ip}"/>
 					<constructor-arg value="${redis.port}" type="int"/>
 				</bean>
 			</set>

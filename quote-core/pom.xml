@@ -15,6 +15,13 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <chexian-quote.version>1.0-SNAPSHOT</chexian-quote.version>
     </properties>
-
+    <dependencies>
+    <dependency>
+        <groupId>chelenet.chexian-quote</groupId>
+        <artifactId>quote-common</artifactId>
+        <version>${chexian-quote.version}</version>
+    </dependency>
+    </dependencies>
 </project>
